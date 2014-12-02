@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
-	has_many :reviews
+	# before_filter :authenticate_user!
+	# has_many :reviews
 
 	def index
 		@users = User.all
 	end
-	
+
 	def show
 		@user = User.find(params[:id])
+	end
 end

@@ -1,11 +1,14 @@
 <h1>Rate My CRUD</h1>
 
 <p>
-	<%= link_to 'Users:' %> <%= User.count %> registered 
+	<%= link_to 'Users:', users_path %> <%= User.count %> registered 
 </p>
-<% if current_user = nil %>
+<% if 1==1%>
+	<h4> Hmm... You don't seem to be logged in <h4> 
+	<p> NEEDA LOG YO ASS IN FIRST? <p>
+	<%= button_to "WHY YES YOU DO" %>
+<%end%>
+<% if 1==1%>
 	<p> YOU WANNA RATE SOME SHIT? </p>
 	<%= button_to "WHY YES YOU DO", :class => "buttom medium", :method =>"patch" %>
-	<P> NEEDA LOG YO ASS IN FIRST? <p>
-	<%= button_to "WHY YES YOU DO" %>
 <%end%>
