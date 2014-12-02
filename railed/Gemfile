@@ -28,7 +28,6 @@ gem 'spring',        group: :development
 
 # Paperclip gem does _______
 gem 'paperclip'
-
 # user login
 gem 'devise'
 # Use ActiveModel has_secure_password
