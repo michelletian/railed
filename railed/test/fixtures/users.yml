@@ -3,9 +3,9 @@
 one:
   name: MyString
   city: MyString
-  review_count: 
+  review_count: 1
 
 two:
   name: MyString
   city: MyString
-  review_count: 
+  review_count: 1

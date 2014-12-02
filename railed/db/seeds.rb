@@ -6,7 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(name: 'Brian', city: 'Berkeley', review_count:1)
-Bathroom.create(name: 'Wheeler 1st Floor', location: 'Wheeler Hall', rating:3, cleanliness:3, comfort:3, smell:3, availability:3)
-Bathroom.create(name: 'Dwinelle Dungeon of Dreams', location: 'Dwinelle Hall', rating:1, cleanliness:1, comfort:1, smell:1, availability:1)
+# Make Pokemon
+%w(Squirtle Charmander Bulbasaur Pikachu).each do |name|
+  Pokemon.create name: name, level: rand(1..20), health: 100
+end
+
+# Make other trainers
+%w(Ash Gary Misty Brock).each do |name|
+  Trainer.create name: name, email: name+"@pokeportal.com", password: 'password'
+end
+
+# Make users
+%w(Brian Michelle Gavin).each do |name|
+  Trainer.create name: name, email: name+"@crudmail.com", password: 'password', city: 'Berkeley', review_count: 0
+end
 

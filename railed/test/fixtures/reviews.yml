@@ -2,12 +2,20 @@
 
 one:
   text: MyString
-  bathroom_id: 1
   user_id: 1
-  rating: 1
+  bathroom_id: 1
+  overall_rating: 1
+  cleanliness: 1
+  comfort: 1
+  smell: 1
+  availability: 1
 
 two:
   text: MyString
-  bathroom_id: 1
   user_id: 1
-  rating: 1
+  bathroom_id: 1
+  overall_rating: 1
+  cleanliness: 1
+  comfort: 1
+  smell: 1
+  availability: 1
