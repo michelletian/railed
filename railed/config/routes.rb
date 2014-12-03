@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get '/users', to: 'users#index', as: :users
   devise_for :users
   resources :users
-  resources :bathooms
+  resources :bathrooms
   resources :reviews
-  get '/bathrooms', to: 'bathrooms#index', as: :bathroom
 end

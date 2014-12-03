@@ -1,20 +1,13 @@
 
-<h3><%= @bathroom.name if @tbathroom.name %></h3>
+<h1><%= @bathroom.name if @bathroom.name %></h1>
 <p>Location: <%= @bathroom.location if @bathroom.location %></p>
 <p>Overall Rating: <%= @bathroom.rating if @bathroom.rating %></p>
-<!-- <h3>Pokemon: </h3>
-<% list = Pokemon.where(trainer:@trainer.id) %>
-<% for @pokemon in list do %>
-	<% if @pokemon.health > 0 %>
-		<p><%= @pokemon.name %>, Level: <%= @pokemon.level %>, Health: <%= @pokemon.health %> <%= button_to "Damage", damage_path(id: @pokemon.id), :class => "button medium", :method => :patch %>
-		  <% if @trainer.id == current_trainer.id %>
-		  	<%= button_to "Heal", heal_path(id: @pokemon.id), :class => "button medium", :method => :patch %> </p>
-		  <% end %>
-	<% elsif @trainer.id == current_trainer.id %>
-		<p><%= @pokemon.name %>, Level: <%= @pokemon.level %>, Health: <%= @pokemon.health %> <%= button_to "Heal", heal_path(id: @pokemon.id), :class => "button medium", :method => :patch %> </p>
-	<% end %>
+<p>Cleanliness: <%= @bathroom.cleanliness if @bathroom.cleanliness %>, Comfort: <%= @bathroom.comfort if @bathroom.comfort %>, Smell: <%= @bathroom.smell if @bathroom.smell %>, Availability: <%= @bathroom.availability if @bathroom.availability %></p>
+<h3> Reviews (<%= @bathroom.review_count if @bathroom.review_count %>) </h3>
+<% list = Review.where(bathroom:@bathroom.id) %>
+<% for @review in list do %>
+	<h4> Review by: <%= User.find(@review.user_id).name %> <h4>
+	<p> "<%= @review.text if @review.text %>" </p>
+	<p>Overall Rating: <%= @review.overall_rating if @review.overall_rating %></p>
+	<p> Cleanliness: <%= @review.cleanliness if @review.cleanliness %>, Comfort: <%= @review.comfort if @review.comfort %>, Smell: <%= @review.smell if @review.smell %>, Availability: <%= @review.availability if @review.availability %></p>
 <% end %>
-<% if @trainer.id == current_trainer.id %>
-<h3> Feeling Lonely? </h3>
-	<p> <%= button_to "Create Pokemon", new_pokemon_path, :class => "button medium", :method => :get %> </p>
-<% end %> -->

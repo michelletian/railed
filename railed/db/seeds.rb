@@ -14,3 +14,7 @@ end
 %w(Wheeler Dwinelle Soda).each do |name|
 	Bathroom.create name: name, location: name, rating: 1, cleanliness: 1, comfort: 1, smell: 1, availability: 1, review_count: 1
 end
+
+Review.create text: 'This bathroom is the CRUD!! 5/5 would poop again.', overall_rating: 1, cleanliness: 1, comfort: 1, smell: 1, availability: 1, bathroom_id: 1, user_id: 1
+Review.create text: 'This bathroom stinks. Needs better TP...', overall_rating: 1, cleanliness: 1, comfort: 1, smell: 1, availability: 1, bathroom_id: 2, user_id: 2
+Review.create text: 'The best place to relive my bladder of all the soda I drank!', overall_rating: 1, cleanliness: 1, comfort: 1, smell: 1, availability: 1, bathroom_id: 3, user_id: 3
