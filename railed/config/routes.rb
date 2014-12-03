@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :users
   resources :bathooms
   resources :reviews
+  get '/bathrooms', to: 'bathrooms#index', as: :bathroom
 end

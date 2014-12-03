@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <h3>Bathrooms</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @bathrooms.each do |bathroom| %>
+            <tr>
+              <%= render bathroom %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
