@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  get 'home/index'
   root to: 'home#index'
-  patch '/damage_path', to: 'pokemons#damage', as: :damage
-  patch '/heal_path', to: 'pokemons#heal', as: :heal
-  devise_for :trainers
-  resources :trainers
-  patch '/home/capture_path', to: 'pokemons#capture', as: :capture
-  resources :pokemons
+  get '/users', to: 'users#index', as: :users
+  devise_for :users
+  resources :users
+  resources :bathooms
+  resources :reviews
 end
