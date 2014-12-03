@@ -6,7 +6,8 @@
 <h3> Reviews (<%= @bathroom.review_count if @bathroom.review_count %>) </h3>
 <% list = Review.where(bathroom:@bathroom.id) %>
 <% for @review in list do %>
-	<h4> Review by: <%= User.find(@review.user_id).name %> <h4>
+	<% @user = User.find(@review.user_id) %>
+	<h4> Review by: <%= link_to @user.name, @user %> <h4>
 	<p> "<%= @review.text if @review.text %>" </p>
 	<p>Overall Rating: <%= @review.overall_rating if @review.overall_rating %></p>
 	<p> Cleanliness: <%= @review.cleanliness if @review.cleanliness %>, Comfort: <%= @review.comfort if @review.comfort %>, Smell: <%= @review.smell if @review.smell %>, Availability: <%= @review.availability if @review.availability %></p>

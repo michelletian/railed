@@ -6,7 +6,7 @@
         <tbody>
           <% @users.each do |user| %>
             <tr>
-              <%= User.name %>
+              <%= render user %>
             </tr>
           <% end %>
         </tbody>

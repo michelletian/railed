@@ -1,0 +1,12 @@
+<h1><%= @user.name if @user.name %></h1>
+<p>Location: <%= @user.city if @user.city %></p>
+
+<h3> Reviews(<%= @user.review_count if @user.review_count %>): </h3>
+<% list = Review.where(user:@user.id) %>
+<% for @review in list do %>
+<% @bathroom = Bathroom.find(@review.bathroom_id) %>
+	<h4> Review for: <%= link_to @bathroom.name, @bathroom %> <h4>
+	<p> "<%= @review.text if @review.text %>" </p>
+	<p>Overall Rating: <%= @review.overall_rating if @review.overall_rating %></p>
+	<p> Cleanliness: <%= @review.cleanliness if @review.cleanliness %>, Comfort: <%= @review.comfort if @review.comfort %>, Smell: <%= @review.smell if @review.smell %>, Availability: <%= @review.availability if @review.availability %></p>
+<% end %>

@@ -1,9 +1,10 @@
 class Review < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :bathroom
-	# validates :rating, :in => 1..5
-	# validates :cleanliness, :in => 1..5
-	# validates :comfort, :in => 1..5
-	# validates :smell, :in => 1..5
-	# validates :availability, :in => 1..5
+	validates_uniqueness_of :user_id, :scope => :bathroom_id
+	validates_inclusion_of :overall_rating, :in => 1..5, allow_nil: true
+	validates_inclusion_of :cleanliness, :in => 1..5, allow_nil: true
+	validates_inclusion_of :comfort, :in => 1..5, allow_nil: true
+	validates_inclusion_of :smell, :in => 1..5, allow_nil: true
+	validates_inclusion_of :availability, :in => 1..5, allow_nil: true
 end
