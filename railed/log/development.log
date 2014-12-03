@@ -33690,3 +33690,43 @@ Binary data inserted for `string` type on column `encrypted_password`
   [1m[36mReview Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "reviews"  WHERE ("reviews"."user_id" = 3 AND "reviews"."bathroom_id" = 3) LIMIT 1[0m
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "reviews" ("availability", "bathroom_id", "cleanliness", "comfort", "created_at", "overall_rating", "smell", "text", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["availability", 1], ["bathroom_id", 3], ["cleanliness", 1], ["comfort", 1], ["created_at", "2014-12-03 23:53:39.001834"], ["overall_rating", 1], ["smell", 1], ["text", "The best place to relive my bladder of all the soda I drank!"], ["updated_at", "2014-12-03 23:53:39.001834"], ["user_id", 3]]
   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-12-03 15:54:18 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews"  WHERE "reviews"."user_id" = 1[0m
+  [1m[35mBathroom Load (0.2ms)[0m  SELECT  "bathrooms".* FROM "bathrooms"  WHERE "bathrooms"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (23.6ms)
+  Rendered layouts/_navigation_links.html.erb (3.8ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (21.6ms)
+Completed 200 OK in 293ms (Views: 268.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/bathrooms/1" for 127.0.0.1 at 2014-12-03 15:54:26 -0800
+Processing by BathroomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBathroom Load (0.2ms)[0m  [1mSELECT  "bathrooms".* FROM "bathrooms"  WHERE "bathrooms"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."bathroom_id" = 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered bathrooms/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 137ms (Views: 134.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bathrooms/1" for 127.0.0.1 at 2014-12-03 15:54:54 -0800
+Processing by BathroomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBathroom Load (0.1ms)[0m  SELECT  "bathrooms".* FROM "bathrooms"  WHERE "bathrooms"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews"  WHERE "reviews"."bathroom_id" = 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered bathrooms/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 129ms (Views: 127.3ms | ActiveRecord: 0.4ms)
