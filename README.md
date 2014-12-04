@@ -1,6 +1,8 @@
 
 Title: Rate My Crud
+
 Team Members: Gavin Chan, Brian Chen, Michelle Tian
+
 Demo Link: http://rate-my-crud.herokuapp.com/
 
 Idea: An application where users can rate different bathrooms in order to find the most optimal place to drop a crud. 
