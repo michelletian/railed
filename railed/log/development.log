@@ -34985,3 +34985,190 @@ ActionController::RoutingError (No route matches [GET] "/dist/css/bootstrap.min.
   Rendered /Users/Michelle/.rvm/gems/ruby-2.1.3@rails-devise/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
   Rendered /Users/Michelle/.rvm/gems/ruby-2.1.3@rails-devise/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
   Rendered /Users/Michelle/.rvm/gems/ruby-2.1.3@rails-devise/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeTextForReviews (20141204014439)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141204014439"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeOverallRatingForReviews (20141204014508)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141204014508"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to ChangeRatingForBathrooms (20141204014525)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141204014525"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to ChangeCleanlinessForBathrooms (20141204014553)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141204014553"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeSmellForBathrooms (20141204014611)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141204014611"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to ChangeAvailabilityForBathrooms (20141204014635)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141204014635"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Migrating to ChangeComfortForBathrooms (20141204014649)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141204014649"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'brian@crudmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'michelle@crudmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'gavin@crudmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBathroom Exists (0.1ms)[0m  SELECT  1 AS one FROM "bathrooms"  WHERE "bathrooms"."name" = 'Wheeler' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBathroom Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "bathrooms"  WHERE "bathrooms"."name" = 'Dwinelle' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBathroom Exists (0.1ms)[0m  SELECT  1 AS one FROM "bathrooms"  WHERE "bathrooms"."name" = 'Soda' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBathroom Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "bathrooms"  WHERE "bathrooms"."name" = 'Cory' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReview Exists (0.1ms)[0m  SELECT  1 AS one FROM "reviews"  WHERE ("reviews"."user_id" = 1 AND "reviews"."bathroom_id" = 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mReview Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "reviews"  WHERE ("reviews"."user_id" = 2 AND "reviews"."bathroom_id" = 2) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mReview Exists (0.1ms)[0m  SELECT  1 AS one FROM "reviews"  WHERE ("reviews"."user_id" = 3 AND "reviews"."bathroom_id" = 3) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "bathrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "location" varchar(255), "rating" integer, "cleanliness" integer, "comfort" integer, "smell" integer, "availability" integer, "created_at" datetime, "updated_at" datetime, "review_count" integer) [0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" varchar(255), "user_id" integer, "bathroom_id" integer, "overall_rating" integer, "cleanliness" integer, "comfort" integer, "smell" integer, "availability" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "city" varchar(255), "review_count" integer, "password" varchar(255)) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141204014649')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141018081058')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141018081059')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141202202526')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141202202733')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141203020442')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141203204558')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141204014439')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141204014508')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141204014525')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141204014553')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141204014611')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141204014635')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'brian@crudmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("city", "created_at", "email", "encrypted_password", "name", "review_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Berkeley"], ["created_at", "2014-12-04 01:47:14.587596"], ["email", "brian@crudmail.com"], ["encrypted_password", "$2a$10$ojMI2SMWEEt/Qe.LcjAWJeZWUniPvNqwu6iabqYVn6skfONSr.7WO"], ["name", "Brian"], ["review_count", 1], ["updated_at", "2014-12-04 01:47:14.587596"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'michelle@crudmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("city", "created_at", "email", "encrypted_password", "name", "review_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Berkeley"], ["created_at", "2014-12-04 01:47:14.673946"], ["email", "michelle@crudmail.com"], ["encrypted_password", "$2a$10$4HVeE4zzlhH6ONRBEC6Ex.xIjR/j6VRSgJC3nj2KxdTGs9e/X9fjq"], ["name", "Michelle"], ["review_count", 1], ["updated_at", "2014-12-04 01:47:14.673946"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'gavin@crudmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("city", "created_at", "email", "encrypted_password", "name", "review_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Berkeley"], ["created_at", "2014-12-04 01:47:14.751769"], ["email", "gavin@crudmail.com"], ["encrypted_password", "$2a$10$iNjSKztxaiduz5TuwAD4a.bNjZUs9wrg.PcSvViI9wQrEl6exwTFK"], ["name", "Gavin"], ["review_count", 1], ["updated_at", "2014-12-04 01:47:14.751769"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mBathroom Exists (0.1ms)[0m  SELECT  1 AS one FROM "bathrooms"  WHERE "bathrooms"."name" = 'Wheeler' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bathrooms" ("availability", "cleanliness", "comfort", "created_at", "location", "name", "rating", "review_count", "smell", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["availability", 1], ["cleanliness", 1], ["comfort", 1], ["created_at", "2014-12-04 01:47:14.767225"], ["location", "Wheeler"], ["name", "Wheeler"], ["rating", 1], ["review_count", 1], ["smell", 1], ["updated_at", "2014-12-04 01:47:14.767225"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBathroom Exists (0.1ms)[0m  SELECT  1 AS one FROM "bathrooms"  WHERE "bathrooms"."name" = 'Dwinelle' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "bathrooms" ("availability", "cleanliness", "comfort", "created_at", "location", "name", "rating", "review_count", "smell", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["availability", 1], ["cleanliness", 1], ["comfort", 1], ["created_at", "2014-12-04 01:47:14.770171"], ["location", "Dwinelle"], ["name", "Dwinelle"], ["rating", 1], ["review_count", 1], ["smell", 1], ["updated_at", "2014-12-04 01:47:14.770171"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mBathroom Exists (0.1ms)[0m  SELECT  1 AS one FROM "bathrooms"  WHERE "bathrooms"."name" = 'Soda' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "bathrooms" ("availability", "cleanliness", "comfort", "created_at", "location", "name", "rating", "review_count", "smell", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["availability", 1], ["cleanliness", 1], ["comfort", 1], ["created_at", "2014-12-04 01:47:14.772699"], ["location", "Soda"], ["name", "Soda"], ["rating", 1], ["review_count", 1], ["smell", 1], ["updated_at", "2014-12-04 01:47:14.772699"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBathroom Exists (0.1ms)[0m  SELECT  1 AS one FROM "bathrooms"  WHERE "bathrooms"."name" = 'Cory' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "bathrooms" ("created_at", "location", "name", "review_count", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-12-04 01:47:14.775423"], ["location", "Cory"], ["name", "Cory"], ["review_count", 0], ["updated_at", "2014-12-04 01:47:14.775423"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReview Exists (0.1ms)[0m  SELECT  1 AS one FROM "reviews"  WHERE ("reviews"."user_id" = 1 AND "reviews"."bathroom_id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reviews" ("availability", "bathroom_id", "cleanliness", "comfort", "created_at", "overall_rating", "smell", "text", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["availability", 1], ["bathroom_id", 1], ["cleanliness", 1], ["comfort", 1], ["created_at", "2014-12-04 01:47:14.788693"], ["overall_rating", 1], ["smell", 1], ["text", "This bathroom is the CRUD!! 5/5 would poop again."], ["updated_at", "2014-12-04 01:47:14.788693"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReview Exists (0.1ms)[0m  SELECT  1 AS one FROM "reviews"  WHERE ("reviews"."user_id" = 2 AND "reviews"."bathroom_id" = 2) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("availability", "bathroom_id", "cleanliness", "comfort", "created_at", "overall_rating", "smell", "text", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["availability", 1], ["bathroom_id", 2], ["cleanliness", 1], ["comfort", 1], ["created_at", "2014-12-04 01:47:14.791748"], ["overall_rating", 1], ["smell", 1], ["text", "This bathroom stinks. Needs better TP..."], ["updated_at", "2014-12-04 01:47:14.791748"], ["user_id", 2]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mReview Exists (0.1ms)[0m  SELECT  1 AS one FROM "reviews"  WHERE ("reviews"."user_id" = 3 AND "reviews"."bathroom_id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("availability", "bathroom_id", "cleanliness", "comfort", "created_at", "overall_rating", "smell", "text", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["availability", 1], ["bathroom_id", 3], ["cleanliness", 1], ["comfort", 1], ["created_at", "2014-12-04 01:47:14.794244"], ["overall_rating", 1], ["smell", 1], ["text", "The best place to relive my bladder of all the soda I drank!"], ["updated_at", "2014-12-04 01:47:14.794244"], ["user_id", 3]]
+  [1m[35m (0.7ms)[0m  commit transaction
