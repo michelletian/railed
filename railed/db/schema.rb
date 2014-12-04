@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20141204005203) do
-=======
 ActiveRecord::Schema.define(version: 20141204014649) do
->>>>>>> c5e22c7111aa4975e6131922a528b5665e9a75c2
 
   create_table "bathrooms", force: true do |t|
     t.string   "name"
