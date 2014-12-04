@@ -30,7 +30,11 @@ class ReviewsController < ApplicationController
 			end
 			@bathroom.save
 			@user = User.find(@review.user_id)
-			@user.review_count += 1
+			if @user.review_count
+				@user.review_count += 1
+			else
+				@user.review_count = 1
+			end
 			@user.save
 			redirect_to bathroom_path(@review.bathroom_id)
 		else
