@@ -1,6 +1,12 @@
 require 'test_helper'
 
 class ReviewTest < ActiveSupport::TestCase
+
+  def review_bathroom
+  	@review = Review.new
+  	assert_equal @review belongs_to :User
+	end
+
   def reviews_not_nil
   	assert_not_nil reviews
   end
@@ -9,4 +15,5 @@ class ReviewTest < ActiveSupport::TestCase
 	  post = Post.new
 	  assert !post.save
   end
+
 end
