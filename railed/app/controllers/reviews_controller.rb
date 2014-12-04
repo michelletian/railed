@@ -29,6 +29,9 @@ class ReviewsController < ApplicationController
 				@bathroom.cleanliness = @review.cleanliness
 			end
 			@bathroom.save
+			@user = User.find(@review.user_id)
+			@user.review_count += 1
+			@user.save
 			redirect_to bathroom_path(@review.bathroom_id)
 		else
 			flash[:error] = @review.errors.full_messages.to_sentence

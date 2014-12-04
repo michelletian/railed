@@ -7,7 +7,43 @@
 <% for @review in list do %>
 <% @bathroom = Bathroom.find(@review.bathroom_id) %>
 	<h4> Review for: <%= link_to @bathroom.name, @bathroom %> <h4>
-	<p> "<%= @review.text if @review.text %>" </p>
-	<p>Overall Rating: <%= @review.overall_rating if @review.overall_rating %></p>
-	<p> Cleanliness: <%= @review.cleanliness if @review.cleanliness %>, Comfort: <%= @review.comfort if @review.comfort %>, Smell: <%= @review.smell if @review.smell %>, Availability: <%= @review.availability if @review.availability %></p>
+	  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <colgroup>
+        <col class="col-xs-1">
+        <col class="col-xs-7">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Overall Rating</th>
+          <th><%= @bathroom.rating ? @bathroom.rating : 'N/A' %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Cleanliness
+          </td>
+          <td><%= @bathroom.cleanliness ? @bathroom.cleanliness : 'N/A' %></td>
+        </tr>
+        <tr>
+          <td>
+             Comfort
+          </td>
+          <td><%= @bathroom.comfort ? @bathroom.comfort : 'N/A' %></td>
+        </tr>
+        <tr>
+          <td>
+            Smell
+          </td>
+          <td> <%= @bathroom.smell ? @bathroom.smell : 'N/A' %></td>
+        </tr>
+        <tr>
+          <td>
+            Availability
+          </td>
+          <td><%= @bathroom.availability ? @bathroom.availability : 'N/A' %></td>
+        </tr>
+      </tbody>
+    </table>
 <% end %>

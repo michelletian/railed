@@ -1,7 +1,47 @@
 <h1>Bathroom: <%= @bathroom.name if @bathroom.name %></h1>
-<p>Location: <%= @bathroom.location if @bathroom.location %></p>
-<p>Overall Rating: <%= @bathroom.rating ? @bathroom.rating : 'N/A' %></p>
-<p>Cleanliness: <%= @bathroom.cleanliness ? @bathroom.cleanliness : 'N/A' %>, Comfort: <%= @bathroom.comfort ? @bathroom.comfort : 'N/A' %>, Smell: <%= @bathroom.smell ? @bathroom.smell : 'N/A' %>, Availability: <%= @bathroom.availability ? @bathroom.availability : 'N/A' %></p>
+<h3>Location: <%= @bathroom.location if @bathroom.location %></h3>
+<h3>Average Rating from Users:</h3>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <colgroup>
+        <col class="col-xs-1">
+        <col class="col-xs-7">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Overall Rating</th>
+          <th><%= @bathroom.rating ? @bathroom.rating : 'N/A' %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Cleanliness
+          </td>
+          <td><%= @bathroom.cleanliness ? @bathroom.cleanliness : 'N/A' %></td>
+        </tr>
+        <tr>
+          <td>
+             Comfort
+          </td>
+          <td><%= @bathroom.comfort ? @bathroom.comfort : 'N/A' %></td>
+        </tr>
+        <tr>
+          <td>
+            Smell
+          </td>
+          <td> <%= @bathroom.smell ? @bathroom.smell : 'N/A' %></td>
+        </tr>
+        <tr>
+          <td>
+            Availability
+          </td>
+          <td><%= @bathroom.availability ? @bathroom.availability : 'N/A' %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 <%= link_to "Add a Review!", review_things_path(:bathroom_id => @bathroom.id), :class => "button medium", :method => :get %>
 <h3> Reviews (<%= @bathroom.review_count if @bathroom.review_count %>) </h3>
 <% list = Review.where(bathroom:@bathroom.id) %>
@@ -9,6 +49,44 @@
 	<% @user = User.find(@review.user_id) %>
 	<h4> Review by: <%= link_to @user.name, @user %> <h4>
 	<p> "<%= @review.text if @review.text %>" </p>
-	<p>Overall Rating: <%= @review.overall_rating if @review.overall_rating %></p>
-	<p> Cleanliness: <%= @review.cleanliness if @review.cleanliness %>, Comfort: <%= @review.comfort if @review.comfort %>, Smell: <%= @review.smell if @review.smell %>, Availability: <%= @review.availability if @review.availability %></p>
+	  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <colgroup>
+        <col class="col-xs-1">
+        <col class="col-xs-7">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Overall Rating</th>
+          <th><%= @review.overall_rating ? @review.overall_rating : 'N/A' %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Cleanliness
+          </td>
+          <td><%= @review.cleanliness ? @review.cleanliness : 'N/A' %></td>
+        </tr>
+        <tr>
+          <td>
+             Comfort
+          </td>
+          <td><%= @review.comfort ? @review.comfort : 'N/A' %></td>
+        </tr>
+        <tr>
+          <td>
+            Smell
+          </td>
+          <td> <%= @review.smell ? @review.smell : 'N/A' %></td>
+        </tr>
+        <tr>
+          <td>
+            Availability
+          </td>
+          <td><%= @review.availability ? @review.availability : 'N/A' %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 <% end %>
