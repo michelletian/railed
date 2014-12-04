@@ -1,8 +1,8 @@
-
 <h1>Bathroom: <%= @bathroom.name if @bathroom.name %></h1>
 <p>Location: <%= @bathroom.location if @bathroom.location %></p>
 <p>Overall Rating: <%= @bathroom.rating ? @bathroom.rating : 'N/A' %></p>
 <p>Cleanliness: <%= @bathroom.cleanliness ? @bathroom.cleanliness : 'N/A' %>, Comfort: <%= @bathroom.comfort ? @bathroom.comfort : 'N/A' %>, Smell: <%= @bathroom.smell ? @bathroom.smell : 'N/A' %>, Availability: <%= @bathroom.availability ? @bathroom.availability : 'N/A' %></p>
+<%= link_to "Add a Review!", review_things_path(:bathroom_id => @bathroom.id), :class => "button medium", :method => :get %>
 <h3> Reviews (<%= @bathroom.review_count if @bathroom.review_count %>) </h3>
 <% list = Review.where(bathroom:@bathroom.id) %>
 <% for @review in list do %>

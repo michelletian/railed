@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :users
   resources :bathrooms
   resources :reviews
+  post 'reviews/new', to: 'reviews#update'
+  get 'reviews/new', as: :review_things
 end

@@ -1,0 +1,29 @@
+<% @bathroom = Bathroom.find(params[:bathroom_id]) if params[:bathroom_id] %>
+<p>Review <%= @bathroom.name if @bathroom %></p>
+<%= simple_form_for :review do |f| %>
+  <p>
+    <%= f.label :cleanliness %><br>
+    <%= f.number_field  :cleanliness %>
+  </p>
+  <p>
+	<%= f.label :comfort %><br>
+	<%= f.number_field :comfort %>
+  </p>
+  <p>
+	<%= f.label :smell %><br>
+	<%= f.number_field :smell %>
+  </p>
+  <p>
+	<%= f.label :availability  %><br>
+	<%= f.number_field :availability %>
+  </p>
+  <p>
+  <%= f.hidden_field :bathroom_id, {:value => @bathroom.id} %>
+	<%= f.label "Review" %><br>
+	<%= f.text_field :text %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %><br>
+  </p>
+<% end %>
